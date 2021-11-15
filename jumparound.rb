@@ -3,8 +3,8 @@ class Jumparound < Formula
 
   desc "Quickly jump around between your projects."
   homepage "https://github.com/M-Porter/jumparound"
-  url "https://github.com/M-Porter/jumparound/archive/refs/tags/0.3.0.tar.gz"
-  sha256 "d1ffca28b41c003282bee8c5d97b9e917385961754a8492eabe45da17c5f3a3a"
+  url "https://github.com/M-Porter/jumparound/archive/refs/tags/0.4.0.tar.gz"
+  sha256 "2a72bf7000431bdf209835d5a49ac4a3d063febd82acb5f7de23821000615fca"
   license "MIT"
   head "https://github.com/M-Porter/jumparound.git", branch: "main"
 
