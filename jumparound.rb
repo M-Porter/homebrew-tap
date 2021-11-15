@@ -47,6 +47,8 @@ class Jumparound < Formula
 
   def install
     virtualenv_install_with_resources
+
+    prefix.install "bin/jumparound.sh"
   end
 
   test do
