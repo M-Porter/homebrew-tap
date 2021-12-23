@@ -1,10 +1,10 @@
 class Jumparound < Formula
   include Language::Python::Virtualenv
 
-  desc "Quickly jump around between your projects."
+  desc "Quickly jump around between your projects"
   homepage "https://github.com/M-Porter/jumparound"
-  url "https://github.com/M-Porter/jumparound/archive/refs/tags/0.4.0.tar.gz"
-  sha256 "2a72bf7000431bdf209835d5a49ac4a3d063febd82acb5f7de23821000615fca"
+  url "https://github.com/M-Porter/jumparound/archive/refs/tags/0.5.0.tar.gz"
+  sha256 "3a3ca9c94798006a8b24557c11a1cac11c2ebb78b8c1adaad67fe8e31f5ecb16"
   license "MIT"
   head "https://github.com/M-Porter/jumparound.git", branch: "main"
 
@@ -47,6 +47,23 @@ class Jumparound < Formula
 
   def install
     virtualenv_install_with_resources
+
+    prefix.install "bin/jumparound.sh"
+  end
+
+  def caveats
+    <<~EOS
+
+      ####################
+           JUMPAROUND
+      ####################
+
+      * Add the following to your shell profile and then use it with `j`
+          source "$(brew --prefix jumparound)/jumparound.sh"
+      * Change the shortcut by exporting `JUMPAROUND_FUNC` to whatever you want.
+      * See https://github.com/M-Porter/jumparound/blob/main/README.md for more post-installation directions.
+
+    EOS
   end
 
   test do
