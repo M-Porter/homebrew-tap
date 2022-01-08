@@ -5,47 +5,43 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_darwin_arm64.tar.gz"
-      sha256 "1bfeda479699d047e066674e1d4ebedb8a1c36656a30fb6e5da7e5258a0b8497"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.3/jumper_0.1.3_darwin_arm64.tar.gz"
+      sha256 "4bdefb76757aac361ad71b2274f1300ffbcd11a4e8eb3fcb3ac2092ce1eb0ecc"
 
       def install
         bin.install "jumper"
-        prefix.install "bin/jumper.sh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_darwin_amd64.tar.gz"
-      sha256 "e4cd048558750651b45a932903f5e559b7d78213a1921895ebd43f765a7323b6"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.3/jumper_0.1.3_darwin_amd64.tar.gz"
+      sha256 "c47e6f0f9b182de1eae386be7d6d391bd70aa3df4f0ed256b75c8a4cfea76b61"
 
       def install
         bin.install "jumper"
-        prefix.install "bin/jumper.sh"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_linux_arm64.tar.gz"
-      sha256 "95c686fa7d9f523e8bfb178c62094b748d322edc4a2051a6dd244c378cd19589"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.3/jumper_0.1.3_linux_arm64.tar.gz"
+      sha256 "69dfe3affd24cf03c25d5ef86a978090e8ce3ce869bb9aab45646db7324d8ce1"
 
       def install
         bin.install "jumper"
-        prefix.install "bin/jumper.sh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_linux_amd64.tar.gz"
-      sha256 "bf1cda6fc798a604fcf24e664bd099ceaea86803c5bb1e128ddcfd8c4379c402"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.3/jumper_0.1.3_linux_amd64.tar.gz"
+      sha256 "b95dcbe386b71058cc9c16c2db96c41bac3e7478fc2a22bdcc753a9823f8d82d"
 
       def install
         bin.install "jumper"
-        prefix.install "bin/jumper.sh"
       end
     end
   end
