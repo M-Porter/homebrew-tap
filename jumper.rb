@@ -5,13 +5,13 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.1/jumper_0.1.1_darwin_arm64.tar.gz"
-      sha256 "c53cea51091bb2842e00a0f4150b355267a3f562ed87860b764a17c7f46c7ccb"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_darwin_arm64.tar.gz"
+      sha256 "1bfeda479699d047e066674e1d4ebedb8a1c36656a30fb6e5da7e5258a0b8497"
 
       def install
         bin.install "jumper"
@@ -19,8 +19,8 @@ class Jumper < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.1/jumper_0.1.1_darwin_amd64.tar.gz"
-      sha256 "1f1f8f95af121914fc57b5a0334ac202eaad7a8b9f7f453532cc457a8d527f39"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_darwin_amd64.tar.gz"
+      sha256 "e4cd048558750651b45a932903f5e559b7d78213a1921895ebd43f765a7323b6"
 
       def install
         bin.install "jumper"
@@ -31,8 +31,8 @@ class Jumper < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.1/jumper_0.1.1_linux_arm64.tar.gz"
-      sha256 "529ce746e11b9ce72fb6e9f3fad5d11327190e3f5f6fdc34b9be4995c42b9e1e"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_linux_arm64.tar.gz"
+      sha256 "95c686fa7d9f523e8bfb178c62094b748d322edc4a2051a6dd244c378cd19589"
 
       def install
         bin.install "jumper"
@@ -40,8 +40,8 @@ class Jumper < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.1.1/jumper_0.1.1_linux_amd64.tar.gz"
-      sha256 "21c2169241e1f99e532dfa0dce8fa31cff8e31fa0118cfc2e7cfdcdf8712a4ed"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.1.2/jumper_0.1.2_linux_amd64.tar.gz"
+      sha256 "bf1cda6fc798a604fcf24e664bd099ceaea86803c5bb1e128ddcfd8c4379c402"
 
       def install
         bin.install "jumper"
@@ -59,6 +59,6 @@ class Jumper < Formula
   end
 
   test do
-    system "#{bin}/program --version"
+    system "#{bin}/jumper --version"
   end
 end
