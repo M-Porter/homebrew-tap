@@ -5,21 +5,21 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.2.0/jumper_0.2.0_darwin_arm64.tar.gz"
-      sha256 "4582264e57541a5567e12522249af1fa4578aaf1736b436a17fbc55924d936d7"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.3.0/jumper_0.3.0_darwin_arm64.tar.gz"
+      sha256 "f9be0db9207b0c9cb34b8fcbcdf67074c29b394698191a547cde7c0523f81c36"
 
       def install
         bin.install "jumper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.2.0/jumper_0.2.0_darwin_amd64.tar.gz"
-      sha256 "bc69453576c0a5e17c8bf886d505ba4f36da5619b0f6a5ef44b52124df7f7934"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.3.0/jumper_0.3.0_darwin_amd64.tar.gz"
+      sha256 "138ab67a59a0dfe128a004abeaa265c79e6f6dd4023231b5463dbd7e3ab3356c"
 
       def install
         bin.install "jumper"
@@ -29,16 +29,16 @@ class Jumper < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.2.0/jumper_0.2.0_linux_arm64.tar.gz"
-      sha256 "356945f4f2bfa9a23a90c89fd4e3093c8dfc2be2948ef80c3257473f76d3bf43"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.3.0/jumper_0.3.0_linux_arm64.tar.gz"
+      sha256 "d9b5431e0ea7e7cc16fdf609a7e2b8d6956010e17ed64b6e858f6ef1d9005c97"
 
       def install
         bin.install "jumper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v0.2.0/jumper_0.2.0_linux_amd64.tar.gz"
-      sha256 "06387056360dc04af13ae16e45266d6553370a24dd554e7cc9bdf9382a44df21"
+      url "https://github.com/M-Porter/jumper/releases/download/v0.3.0/jumper_0.3.0_linux_amd64.tar.gz"
+      sha256 "5a1fd054731bae8b2e1d33e64cf2ce9199f79c29a33e5207e8055f38399e002a"
 
       def install
         bin.install "jumper"
@@ -47,14 +47,7 @@ class Jumper < Formula
   end
 
   def caveats; <<~EOS
-    * Add the following to your shell profile and then use it with `j`
-        source "$(brew --prefix jumper)/jumper.sh"
-    * Change the shortcut by exporting `JUMPER_FUNC` to whatever you want.
-    * See https://github.com/M-Porter/jumper/blob/main/README.md for more post-installation directions.
+    Run `jumper setup` for setup instructions.
   EOS
-  end
-
-  test do
-    system "#{bin}/jumper --version"
   end
 end
