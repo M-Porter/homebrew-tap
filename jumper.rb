@@ -5,21 +5,21 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.3.0/jumper_1.3.0_darwin_arm64.tar.gz"
-      sha256 "2ce4fd7a201194607fbba5a41d62f030bc461657847a8a2d4e1ad30c2029db37"
+      url "https://github.com/M-Porter/jumper/releases/download/v1.3.1/jumper_1.3.1_darwin_arm64.tar.gz"
+      sha256 "ee839f50188ef0d97868d4bf8d63f889df9d716235e2e15df6b1e09b1677ee10"
 
       def install
         bin.install "jumper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.3.0/jumper_1.3.0_darwin_amd64.tar.gz"
-      sha256 "60e8c3dc02a6a1001b8f50d20d7425766420ca34b2e1c7c8984cf821aff8e538"
+      url "https://github.com/M-Porter/jumper/releases/download/v1.3.1/jumper_1.3.1_darwin_amd64.tar.gz"
+      sha256 "c45c20d0221f890ca6f5400d01212a3c1e08e67747c166175f1ae79d61b6ae74"
 
       def install
         bin.install "jumper"
@@ -29,16 +29,16 @@ class Jumper < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.3.0/jumper_1.3.0_linux_arm64.tar.gz"
-      sha256 "ec9fd39dc2edc35409c3ca097e0575edb49112b78abb106a094bb7aa1bd9ebf7"
+      url "https://github.com/M-Porter/jumper/releases/download/v1.3.1/jumper_1.3.1_linux_arm64.tar.gz"
+      sha256 "72d5ebf8a5fc1503d7a5966748f9652782ffbd67a3d0f6615f0a9ca700b803df"
 
       def install
         bin.install "jumper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.3.0/jumper_1.3.0_linux_amd64.tar.gz"
-      sha256 "c06d2e947282e5a133d5398d148c98acf464edb397eba23a7342c35110d44458"
+      url "https://github.com/M-Porter/jumper/releases/download/v1.3.1/jumper_1.3.1_linux_amd64.tar.gz"
+      sha256 "426d7f4ff2ae39e7189e12bf07701254708a06179830cf2554ac8c111d206a1f"
 
       def install
         bin.install "jumper"
