@@ -5,49 +5,48 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "1.4.0"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.4.0/jumper_1.4.0_darwin_arm64.tar.gz"
-      sha256 "a2495b637196c05bb06b8f8dbb08def680f2aafc6c504782bdf7b01c8d243a43"
+    if Hardware::CPU.intel?
+      url "https://github.com/M-Porter/jumper/releases/download/v2.0.0/jumper_2.0.0_darwin_amd64.tar.gz"
+      sha256 "8c2c33a67e223f7927d330a2025bd3d0b74cf680434be50446834b6f51864115"
 
-      def install
+      define_method(:install) do
         bin.install "jumper"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.4.0/jumper_1.4.0_darwin_amd64.tar.gz"
-      sha256 "ae877a2cc75196ba11573b9306fbc0b05a3d05299521361c3c12e3617e9cae0d"
+    if Hardware::CPU.arm?
+      url "https://github.com/M-Porter/jumper/releases/download/v2.0.0/jumper_2.0.0_darwin_arm64.tar.gz"
+      sha256 "e18520338e9e36c64ad5de552c65bcf63000c071063652e8e303a3db23d0418b"
 
-      def install
+      define_method(:install) do
         bin.install "jumper"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.4.0/jumper_1.4.0_linux_arm64.tar.gz"
-      sha256 "726afb67a2a090a073c35bd8a2a142fd3ab5148e62e865768fb355c4ae3b92ab"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/M-Porter/jumper/releases/download/v2.0.0/jumper_2.0.0_linux_amd64.tar.gz"
+      sha256 "c795d0fc590f73938bfdd3702b2c2b8700dae824381e2764cac0cfb71150c41a"
+      define_method(:install) do
         bin.install "jumper"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v1.4.0/jumper_1.4.0_linux_amd64.tar.gz"
-      sha256 "6c6fee5ae8f9232d93b6caccda70a5aa8d35baf0597c3b354492d9f6e081871f"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/M-Porter/jumper/releases/download/v2.0.0/jumper_2.0.0_linux_arm64.tar.gz"
+      sha256 "4ede53182af004bf383d5ac1e73cb1dc137fb1d732fc94ca2d347a79e4ca1a7e"
+      define_method(:install) do
         bin.install "jumper"
       end
     end
   end
 
-  def caveats; <<~EOS
-    Run `jumper setup` for setup instructions.
-  EOS
+  def caveats
+    <<~EOS
+      Run `jumper setup` for setup instructions.
+    EOS
   end
 end
