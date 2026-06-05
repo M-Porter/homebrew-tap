@@ -5,21 +5,21 @@
 class Jumper < Formula
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "2.3.0"
+  version "2.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/M-Porter/jumper/releases/download/v2.3.0/jumper_2.3.0_darwin_amd64.tar.gz"
-      sha256 "fb871c19082641e425d7563f5b8e8bca601fc7a4276596366d89512e8cc506f9"
+      url "https://github.com/M-Porter/jumper/releases/download/v2.4.0/jumper_2.4.0_darwin_amd64.tar.gz"
+      sha256 "d19d5e7483426187648465f7f60646a7b1a2c657ed0b86fadb4dc759dd23b78b"
 
       define_method(:install) do
         bin.install "jumper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/M-Porter/jumper/releases/download/v2.3.0/jumper_2.3.0_darwin_arm64.tar.gz"
-      sha256 "f5a9484320aef26687dd5b06550cc51620ad0548fab7254fcff140c724370d11"
+      url "https://github.com/M-Porter/jumper/releases/download/v2.4.0/jumper_2.4.0_darwin_arm64.tar.gz"
+      sha256 "ce15afb067d9736c37d03c8a85e25cbdef84d7d56736bae24f24df08fe8376ab"
 
       define_method(:install) do
         bin.install "jumper"
@@ -29,15 +29,15 @@ class Jumper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v2.3.0/jumper_2.3.0_linux_amd64.tar.gz"
-      sha256 "d8e2fa01c2b3e8fabc3b89c24460dacb4d3280f8f4ac65562848857b9b9ccebf"
+      url "https://github.com/M-Porter/jumper/releases/download/v2.4.0/jumper_2.4.0_linux_amd64.tar.gz"
+      sha256 "7eb8f824430a2db39bf20f19558ce82781a20943ecba85a7686fce6c0681acea"
       define_method(:install) do
         bin.install "jumper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/M-Porter/jumper/releases/download/v2.3.0/jumper_2.3.0_linux_arm64.tar.gz"
-      sha256 "21b57f53c5fad3020bf083046aefd608b28515ce2f31ebe25b0da298c9090aef"
+      url "https://github.com/M-Porter/jumper/releases/download/v2.4.0/jumper_2.4.0_linux_arm64.tar.gz"
+      sha256 "b016e12b803b967b1f47a8b3808e354ef1069e0e5f53d440f43430a40d3d274f"
       define_method(:install) do
         bin.install "jumper"
       end
