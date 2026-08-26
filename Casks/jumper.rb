@@ -3,7 +3,7 @@ cask "jumper" do
   name "jumper"
   desc "Quickly jump to your project directories"
   homepage "https://github.com/M-Porter/jumper"
-  version "2.7.0"
+  version "2.8.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "jumper" do
   on_macos do
     on_intel do
       url "https://github.com/M-Porter/jumper/releases/download/v#{version}/jumper_#{version}_darwin_amd64.tar.gz"
-      sha256 "639c607f965a6d86e0c474fd2c12cf6c85525e7701167d1d0d0d50c4874341a6"
+      sha256 "61ac8fb4f513df45357b2afebd80fed905ae264f115d1008b34ba1d320eb2684"
     end
     on_arm do
       url "https://github.com/M-Porter/jumper/releases/download/v#{version}/jumper_#{version}_darwin_arm64.tar.gz"
-      sha256 "ff01cb1810d9ddb9d4e5a513ceaf8714d6a586aff37d7d5697f3efdd5df14b85"
+      sha256 "7f2693c66d562da8354e7d477e8a8e64979fdd44bbbf3b96d33fb5b92a399829"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/M-Porter/jumper/releases/download/v#{version}/jumper_#{version}_linux_amd64.tar.gz"
-      sha256 "8ae4ad1b40ae2b542f4daec03ec01fcbe53e76d746ae9f1015d2b27d5ffa11ce"
+      sha256 "b286301db38de2466b65b378682ca130f06b9c0211586a66230b09cdc4736d51"
     end
     on_arm do
       url "https://github.com/M-Porter/jumper/releases/download/v#{version}/jumper_#{version}_linux_arm64.tar.gz"
-      sha256 "716205e76df0023848077eb7bffaa4fe458b526edb05daaf3125dcb3c7cf6e2f"
+      sha256 "3332c4f34e90624260d2b4b051df992c0d5ab06c5891dec6dde4d82bc2914d65"
     end
   end
 
